@@ -18,7 +18,7 @@ pipeline {
 
         stage('Check Environment') {
             steps {
-                sh '''
+                bat '''
                     java -version
                     git --version
                     docker --version
@@ -30,7 +30,7 @@ pipeline {
         stage('Build and Test') {
             steps {
                 echo 'Building application using Maven'
-                sh '''
+                bat '''
                     chmod +x mvnw
                     ./mvnw -B clean verify
                 '''
@@ -45,7 +45,7 @@ pipeline {
         stage('Build Docker Images') {
             steps {
                 echo 'Building Docker images for microservices'
-                sh '''
+                bat '''
                     ./mvnw -B install -DskipTests \
                         -P buildDocker
                 '''
