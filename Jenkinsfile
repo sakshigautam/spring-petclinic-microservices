@@ -46,7 +46,7 @@ pipeline {
             steps {
                 echo 'Running SonarQube analysis'
         
-                withSonarQubeEnv('SonarQube') {
+                withSonarQubeEnv('SonarQube1') {
                     bat '''
                         mvnw.cmd -B sonar:sonar ^
                         -Dsonar.projectKey=spring-petclinic-ci-project-scan^
