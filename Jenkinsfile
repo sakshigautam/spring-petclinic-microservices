@@ -52,8 +52,6 @@ pipeline {
                         org.sonarsource.scanner.maven:sonar-maven-plugin:5.9.0.7382:sonar ^
                         -Dsonar.projectKey=spring-petclinic-ci-project-scan^
                         -Dsonar.projectName=spring-petclinic-ci-project-scan^
-                        -Dsonar.host.url=http://localhost:9000 ^
-                        -Dsonar.login=sqa_29320148a251915d2864c3257589030fee47715e
                     '''
                 }
             }
