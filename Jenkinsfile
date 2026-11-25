@@ -51,7 +51,9 @@ pipeline {
                         mvnw.cmd -B install ^
                         org.sonarsource.scanner.maven:sonar-maven-plugin:5.9.0.7382:sonar ^
                         -Dsonar.projectKey=spring-petclinic-ci-project-scan^
-                        -Dsonar.projectName=spring-petclinic-ci-project-scan
+                        -Dsonar.projectName=spring-petclinic-ci-project-scan^
+                        -Dsonar.host.url=http://localhost:9000 ^
+                        -Dsonar.login=sqa_86f18a5202e4580a22f90076f48569a9c037b25c
                     '''
                 }
             }
