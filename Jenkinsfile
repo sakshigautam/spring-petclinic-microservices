@@ -49,7 +49,7 @@ pipeline {
                 withSonarQubeEnv('MySonarQube') {
                     bat '''
                         mvnw.cmd -B install -DskipTests ^
-                        org.sonarsource.scanner.maven:sonar-maven-plugin:5.9.0.7382:sonar ^
+                        org.sonarsource.scanner.maven:sonar-maven-plugin:6.0.0.4432:sonar ^
                         -Dsonar.projectKey=spring-petclinic-ci-project-scan^
                         -Dsonar.projectName=spring-petclinic-ci-project-scan
                     '''
